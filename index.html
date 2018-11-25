@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery-carousel 渐隐渐显式轮播图</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="wrapper"></ul>
+		<ul class="focusBox"></ul>
+		<a href="javascript:;" class="arrow arrowLeft">left</a>
+		<a href="javascript:;" class="arrow arrowRight">right</a>
+	</div>
+	<div class="container">
+		<ul class="wrapper"></ul>
+		<ul class="focusBox"></ul>
+		<a href="javascript:;" class="arrow arrowLeft">left</a>
+		<a href="javascript:;" class="arrow arrowRight">right</a>
+	</div>
+	<script type="text/javascript" src="js/jquery.1-11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-banner.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		    $('.container').each(function(index, item){
+		        if (index === 0){
+		            $(item).pluginBnner({
+						url: 'json/banner.json',
+						initIndex: 3,
+						eventFocus: 'click'
+					})
+				}
+				if (index === 1){
+                    $(item).pluginBnner({
+                        url: 'json/banner.json',
+						autoInterval: 3000,
+						showArrow: false,
+						needArrow: false,
+						needFocus: false
+                    })
+				}
+			})
+		})
+	</script>
+</body>
+</html>

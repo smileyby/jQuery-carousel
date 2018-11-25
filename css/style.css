@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	width: 520px;
+	height: 280px;
+	margin: 0 auto 20px;
+	position: relative;
+}
+
+.wrapper li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	opacity: 1;
+	border: 1px solid #bfbfbf;
+	background: #fff url(../images/loading.gif) center center no-repeat;
+}
+
+.wrapper li img {
+	width: 520px;
+	height: 280px;
+	display: none;
+}
+
+.wrapper li.select {
+	z-index: 1;
+	opacity: 1;
+}
+
+.focusBox {
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	z-index: 2;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	font-size: 0;
+	background: rgba(255,255,255,.3);
+}
+
+.focusBox li {
+	display: inline-block;
+	margin: 3px;
+}
+
+.focusBox li a {
+	display: block;
+	padding-top: 8px;
+	width: 8px;
+	height: 0;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.focusBox li.select a {
+	background: #ff5000;
+}
+
+.arrow {
+	display: none;
+	position: absolute;
+	top: 105px;
+	z-index: 2;
+	width: 50px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+	font-size: 12px;
+	color: #ff6700;
+	text-decoration: none;
+	background: rgba(0,0,0,0.3);
+}
+
+.arrow.arrowLeft {
+	left: 0;
+}
+
+.arrow.arrowRight {
+	right: 0;
+}
